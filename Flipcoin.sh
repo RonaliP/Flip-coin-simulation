@@ -27,3 +27,45 @@ do
 	fi
 done
 
+while(true)
+do
+        winner=$((RANDOM%2))
+
+        if [ $winner -eq 1 ]
+        then
+                head=$(($head+1))
+
+        elif [ $winner -eq 0 ]
+        then
+                tail=$(($tail+1))
+	fi
+
+	if [ $head == $tail ]
+	then
+		echo "ITS A TIE BECAUSE HEAD=$head,TAIL=$tail"
+		break
+	fi
+done
+
+ while(true)
+ do
+	winner=$((RANDOM%2))
+
+        if [ $winner -eq 1 ]
+        then
+                head=$(($head+1))
+
+        elif [ $winner -eq 0 ]
+        then
+                tail=$(($tail+1))
+
+        fi
+
+
+	if [ $(($head-$tail)) -eq 2 -o $(($tail-$head)) -eq 2 ]
+	then
+	      echo "HEAD AMD TAIL MINIMUM DIFFERENCE 2 REACHED AS HEAD=$head and TAIL=$tail"
+              break
+	fi
+done
+
